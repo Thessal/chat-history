@@ -1,0 +1,13 @@
+name = "package_name"
+version = "0.1.0"
+defaultTargets = ["equational"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "equational"
