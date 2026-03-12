@@ -1,0 +1,56 @@
+Plan for Operation: Identifying Novel Papers in Symbolic Regression (2016-2026)
+
+## Subgoal 1: Formalization of research question, Identification of factors, Data Preprocessing
+
+### h1. API Endpoints Required
+Based on the documentation and requirements, the primary OpenAlex API endpoint needed is:
+- `/works`: To search and retrieve papers, their references (out-degree), citations (in-degree), abstracts/titles (information density), topics, publication date, open access status, and language.
+Secondary endpoints that could be used if necessary:
+- `/institutions` & `/authors`: To fetch prestige metrics (though likely not controlled/confounded as per the notes).
+- `/topics`: To pinpoint the exact OpenAlex Topic ID for "Symbolic Regression".
+
+### h2. Estimate of Required API Calls
+Based on the manual tracking in `example/`:
+- `depth0.bib` contains 18 root papers.
+- `depth1.txt` contains 287 cited/referencing papers.
+- The average branching factor is roughly 16 edges per paper.
+If we query 10 years of "symbolic regression", we might find ~2,000-5,000 root papers. A depth-1 network would expand to ~30,000 to 80,000 papers. 
+Using OpenAlex pagination (`per_page=200`), fetching 5,000 root papers takes 25 calls. If we batch-query the referenced/citing papers by their OpenAlex IDs (e.g., in batches of 50 using filters), we would need ~1,000 to 2,000 calls. Thus, the estimated number of API calls is between 1,000 and 3,000.
+
+### h3. Estimated Dollar Cost
+**$0.** The OpenAlex REST API provides a generous free tier (up to 100,000 requests per day) provided you use the "Polite Pool" by appending an email address to your queries. This easily covers our estimated 3,000 calls.
+
+### h4. Factor Collection Code
+A script named `collect_factors.py` has been written to query OpenAlex, track the references, and collect variables (out-degree, abstract length, title length, OA status, etc.) outlined in `answers.01.txt`.
+
+
+## Subgoal 2: Identification of Novel Papers
+
+### h1. Causal Inference Method
+To identify genuine logical novelty, we must deconfound the "Seminal Status" (raw citation count $Y$).
+Confounders to condition on: Out-degree, Time, Information Density (title/abstract length), Topic, Language.
+Unobserved Confounder: Hype / Social Capital ($U$).
+Method: Two-Stage Least Squares (2SLS) Instrumental Variable (IV) regression.
+- **Instrument ($Z$)**: Open Access Status / Temporal shocks.
+- **Endogenous Variable ($V$)**: Initial Visibility.
+- **Outcome ($Y$)**: Seminal Status (citation count).
+After conducting the IV regression to partial out the effect of visibility/hype, we examine the residuals (unexplained high citations). 
+Additionally, we filter out papers with extremely high "consolidation" (negative CD-index) aiming to remove methodological utility/consolidation paths, isolating those driven by structural disruptiveness and logical novelty.
+
+### h2. Backbone Extraction Code
+A script named `extract_backbone.py` has been written. It loads the citation graph, computes the CD-index (Consolidation/Disruptiveness), filters out purely consolidated/utility-driven papers using the causal residuals, and applies a transitive reduction (backbone extraction) to yield the dependency graph of novelty.
+
+### h3. Required Environment
+The following Python packages are required (no paid subscriptions needed):
+- `requests` (for API calls)
+- `pandas` (for data manipulation)
+- `networkx` (for graph construction and transitive reduction)
+- `linearmodels` (for 2SLS IV regression)
+- `scipy`, `numpy`
+
+### h4. User's Manual Inspection and Execution
+1. Create a virtual environment: `python3 -m venv venv && source venv/bin/activate`
+2. Install requirements: `pip install requests pandas networkx linearmodels numpy scipy`
+3. Review `collect_factors.py` and run it to pull the OpenAlex dataset.
+4. Review `extract_backbone.py` and execute it on the collected data to output the final dependency DAG.
+5. Manually inspect the resulting `novelty_dependency_graph.graphml` file using Cytoscape or Gephi.

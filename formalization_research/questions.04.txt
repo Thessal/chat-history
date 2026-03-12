@@ -1,0 +1,36 @@
+I identify current situation as : research question is ill-defined or unsolvable using current methodology and dataset .
+Therefore I have do update the research question. The purpose of this operation is : a) show that, by assuming our model is true, Triggered seminal status of paper not mediate by indexical utility nor methodological utility can be identified as novelty driven seminal status. b) using methods of causal inference (if it is proper tool), such papers can be identified.
+Please formalize the research question in statistical and social science language, and clarify the point that needs experimental measurement. 
+
+
+----
+
+We need to detect disruptive topology in the citation network
+Future papers cite the novel paper, but stop citing its predecessors.
+
+* inferred causality chains
+novelty -> disruptive topology 
+novelty -> seminal status (in the long run)
+indexical advantages (author prestige, institutional power, reveiw paper) -> seminal status
+methodological utility (provision of tools or datasets) -> seminal status
+other unobserved non-novelty factors (e.g. social captial, hype) -> initial visiblity -> seminal status 
+open access, temporal shocks -> initial visibility (IV; affects seminal status only via initial visiblity)
+seminal status -> more cited paper
+
+
+-----
+
+Okay, using these causal relation as axiom without verification (because we are not researching bibliography but using it to identify good papers),
+
+Assume that :
+we cannnot directly measure novelty, methodological utility, social capital, initial visibility
+we can measure disruptive/consolidating index, seminal status (citation count), open access
+we can measure indexical advantages (author prestige, institutional power), hype,  by asking other researcher, but measuring it will cause mild overhead in my research
+
+List :
+factors we need to measure additionally (even if we cannot directly measure), method that can be applied, to get the list of papers with high novelty. 
+
+
+-----
+
+

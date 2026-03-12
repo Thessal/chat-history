@@ -1,0 +1,45 @@
+I am currently applying `science of science` methodology to build a more logical *tactic*(like lean 4 tactic concept) that can derive causal relationship between prior works and my research.
+(Please not be confused by the recursive structure : I am using logical workflow for making my workflow logical.)
+But first, we need to identify sets of the prior works, so tactics could be applied. 
+
+<Research Question> 
+/- science of science concepts -/
+class CitationNetwork (paper: a) where op_cite : Network -> paper /- directed citation network. I think my formalism is not good. please fix it -/ 
+abbrev extract_origianl_papers (citation_network) : a hub node in a citation network(directed) /- operation? or abbrev? please formalize this concept. It transforms full citation network into backbone network of important papers. see the attached image for the definition of important work. (focal paper). Please note that we have to identify a seminal paper spawns or advances a specific subfield(dense subnetwork) not just a review paper. -/
+lemma 1: Some academic papers *caused* many follow-up researches
+* h1 : some review papers can be directly selected from my prior knowledge and research interest (symbolic regression)
+* h2 : citation network can be derived by reference tracking review papers using openalex.
+* h3 : use the extracted backbone and validate their importance (use tactic "manually inspect the result")
+* h4 : derive the lemma by using the backbone as a witness.
+lemma 2: My research can be logically derived from the seminal papers.
+h1 :  sorry
+
+<Identification of factors> 
+We need to identify instrument variables, confounders, colliders, chains, that may affect the logical structure of the research questions. 
+List all factors that have causal relationship within variables in lemma 1 or lemma 2.
+Be careful not to ignore metadata (e.g. title length, number of citation, etc.) 
+For this factor identification, I registered to the openalex, and acquired these api endpoints. 
+| **Works** | `/works` | Scholarly documents such as articles, books, and datasets. |
+....
+| **Work Types** | `/work-types` | An enumeration of the different types of scholarly works available. |
+
+< Your task >
+Derivation(above) of logical research(on SR) process need more logical formality and deontic necessity.  Improve it by doing:
+* Formalize the `research question` using LEAN4-like qseudocode.
+* Identify important factors (based on `Identification of factors`) that I can use in tactics for the derivation of research question.
+
+
+
+---
+
+follow-up questions : 
+
+I think my research question was ill-defined and I may caused you to drift (or not) in section 2. 
+Please verify the list is focusing on causal relationship between "logical novelty" and "seminal status". 
+Please update derivation target in the lemma1, into `identification of paper with logical novelty, from noisy seminal status derived from citation network`. Please feel free to question or suspect. I have many misconceptions about `disruptive` topology, or other `science of science` concepts. 
+
+---
+
+follow-up questions : 
+
+Thank you for your logical work. I'd like to apply tactic of counterexample, to verify you are correct: Can your `Causal Factors` correctly filter out review papers that have no novelty? 

@@ -1,0 +1,48 @@
+Write a plan(plan.02.txt) for this operation
+
+Purpose : Identify novel papers published in last 10y(2016~2026), in the field of symbolic regression.
+
+Subgoal 1 : Formalization of research question, Identification of factors, Data Preprocessing
+h1. Read answers.01.txt, info.01.md, and `https://developers.openalex.org/api-reference/`, list api endpoints required for the operation
+h2. Estimate required amount of API call based on data in example/*. This example contains manual depth-1 reference tracking result.
+h3. Based on information in `https://developers.openalex.org/api-reference/`, estimate the dollar cost of the operation.
+h4. Write a code that tracks and collects information(factors) we need for the purpose. (see answers.01.txt)
+
+Subgoal 2 : Identification of novel papers
+h1. Based on answers.01.txt, formalize causal inference method that identifies novel research that caused seminal status via its novelty.
+h2. Write a code that extracts the novel papers, to transform the large citation into *dependency graph of novelty* by doing backbone extraction.
+h3. Identify required environment (python packages, subscriptions, or other requirements)
+h4. User's manual inspection and execution, review
+
+
+----
+
+
+1. I moved collet_factors.py and extract_backbone into ./codes
+2. email address is placed in formalization_research/id.key and formalization_research/secret.key. Use them for collect_factors.py. 
+I find out that it seems that collect_factors.py do not have structure considering the API key. so I suspect collect_factors.py is not caused by the OpenAlex API document. Open https://developers.openalex.org/api-reference/ and explore the document. Verify your code is aligned with factual information provided in the website.
+
+
+----
+
+
+The codes in codes.02 folder are not likely to result sample symbolic regression papers, becuase there may exist novel paper in other field than symbolic regression, but have provided novelty in symbolic regression research. Therefore we need to do the reference tracking, of depth 2 at least. (to detect causal relationship like `SR -> Other field -> SR`)
+I suggest you to utilize `referenced_works` field of `works` endpoint in the OpenAlex API document. (see https://developers.openalex.org/api-reference/works/get-a-single-work)
+
+
+----
+
+
+Print a one line code that estimates the number of depth-0 papers, if it is possible.
+
+
+----
+
+Number of depth-0 paper is 77299, which is too much. 
+We may restrict the range of publication year to 2016~2026, and highly cited papers, or papers with "review" in title. 
+Print a one line code that does it. I'd prefer curl and jq.
+
+----
+
+Modify collect_factors.py to set depth-0 paper with filter condition publication_year:2016-2026,title.search:review,cited_by_count:>100. 
+Also, limit the field of research into { Computer Science (17), Decision Sciences (18), Economics\, Econometrics and Finance (20), Mathematics (26), Physics and Astronomy (31), }. This field constaints applies not only for depth-0, but also for all depth-1, depth-2 papers, and so on.

@@ -1,0 +1,9 @@
+collect_factors.py#L131-170 it will take time to run the script. 
+Please modify the code to print (to stdout) the title of paper (preferably without newline) for each query made in the loop. 
+Also, save the state to csv or pkl for every 10 queries, so it can recover from interrruption. 
+
+
+---
+
+
+Modify collect_factors to store raw queries and responses, to results/*.json  

@@ -1,0 +1,33 @@
+"Logical Novelty" is an unobservable latent variable.
+"Seminal Status" (High citation count) is a noisy, confounded proxy.
+We must introduce network topology and metadata as structural confounders to block the non-novelty citation paths.
+
+
+  * Variables that needs control
+1. Out-degree(number of references in a paper) heavily confounds its in-degree(number of citations a paper received).
+We must condition on out-degree to block the path: High Out-degree → Indexical Utility → Seminal Status.
+2. Time: More attachment over time, confounding "seminal status."
+3. Information Density (title.length, abstract word counts): Shorter titles often correlate with broader claims (appearing novel) and higher citation rates, acting as a behavioral confounder in how researchers search and cite.
+4. Topic (predefined; symbolic regression)
+5(I am not sure). Author/Institutional Prestige : I guess the seminal status makes prestige rather than the prestige making the seminal status.
+6(Minor). Language: English serves as a systemic structural confounder, artificially expanding the reachable citation network (out-component) compared to other languages.
+
+
+  * Variables that shouldn't be controlled
+1. Publication Venues : Both Logical Novelty and Author Prestige causes Elite journals. (collider)
+2. High Citation Count (Seminal Status): Trivial reason
+
+
+  * Complicated
+1. CD-index (Consolidation/Disruption) 
+1-a. It represents bulk eigenvalue of the citation network.
+It is a covariate of seminal status so beta(CD, seminal) is high and skewed. We must remove nodes of highly consoliated papers, to make the network more random-ish.
+1-b. Papers with high methodological utility causes disruptiveness. (e.g. highly optimized Python library is cited because it is convenient)
+Choosing only disruptive node induces preference on high methodological utility.
+
+
+  * IVs 
+1. Open Access Status: A paywall removal acts as an exogenous shock to visibility, driving up citations purely through accessibility rather than logical necessity.
+2. Temporal Shocks: Publishing right before major grant deadlines or massive conferences (like NeurIPS or CVPR) 
+U (Unobserved Confounder: Social Capital/Hype) → V (Initial Visibility) → Y: (Seminal Status)
+Z (Temporal Shock / Open Access) → V (Initial Visibility): Our instrument.

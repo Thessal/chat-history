@@ -1,0 +1,23 @@
+We need to detect disruptive topology in the citation network
+Future papers cite the novel paper, but stop citing its predecessors.
+
+* inferred causality chains
+novelty -> disruptive topology 
+novelty -> seminal status (in the long run)
+indexical advantages (author prestige, institutional power) -> seminal status
+indexical advantages (author prestige, institutional power) -> consolidating topology (review paper)
+methodological utility (provision of tools or datasets) -> seminal status
+other unobserved non-novelty factors (e.g. social capital, hype) -> initial visibility -> seminal status 
+open access -> initial visibility (IV; affects seminal status only via initial visibility)
+
+----
+
+Factors need to be measured : 
+Methodological Utility (M) - via text mining
+Indexical Advantages (I) - use h-index 
+Initial Visibility (V) - citation count within the first 1–2 years of publication.
+
+Methods : 
+1. Select top seminal status with high disruptive index
+2. fit regression model seminal = b0 + b1*I + b2*M + b3*OpenAccess(OA) + b4*EarlyCitation(V) + e 
+   via negativa, use residual as measure of novelty.
