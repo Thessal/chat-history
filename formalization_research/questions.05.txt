@@ -1,0 +1,20 @@
+provided text is a record of response from openalex endpoint. 
+Based on the given text, infer the meaning of fields and explain it into info.05.md as a table.
+Additionally derive information that can be derived as much as you can interpret. (such as lengh of display_name, is "review" in the title, is there a typo, linguisitic features that can be used to connect, author count, mismatch or mutually exclusive in topic, reference to the future, number of location, citation after 1 year, published month, percentage of books in the reference, sum of keyword score, ... )
+
+
+-----
+
+
+Let me use an fictional example, to apply tactic `thought experiment` :
+
+X is an concept, word, or human name
+Two event exists : (A) X becomes popular at time T1 (B) X reveals new truth at time T2.
+Timestamp can be used to infer causality and so we want to detect T2 < T1 case.
+You claimed that we need to build social network to detect event A. I think I can assume that other people's research on `science of science` is correct, and use their metrics.
+
+Does this description correctly represent our situation? 
+
+
+----
+

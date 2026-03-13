@@ -1,0 +1,8 @@
+Based on execution results (generated graph; citation_newtork.graphml, edgelist, nodelist) from collect_factors.py. 
+Calulate cd_index, betweenness centrality, indegree, outdegree for each node. 
+Read nodelist.csv and add apppend fields calculated above, and, save nodelist_networkfeatures.csv
+Don't run the code, because I have to manually inspect the cd_index.
+Feel free to suggest additioanl useful network features to me. 
+
+-----
+

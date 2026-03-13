@@ -1,0 +1,6 @@
+Recommendation for Restructuring
+
+To keep your data strictly separated for rigorous analysis, classify purely by the entity they describe before applying your hypotheses:
+    Nodes (Entities): Author, Institution, Content (Text/Concepts), Venue (Journal/Conference).
+    Edges (Network): References (out-degree), Citations (in-degree), Co-authorships.
+    Spatiotemporal: Time, Location.

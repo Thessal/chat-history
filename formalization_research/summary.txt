@@ -1,0 +1,31 @@
+Meta-research on symbolic regression:
+Disruptiveness and centrality of symbolic regression papers were calculated from citation network.
+Purpose of this research is to find identify disruptive papers in this field.
+
+Results:
+Topics of central papers in citation network of Evolutionary Algorithm : Mathematical optimization, Engineering 
+Topics of disruptive papers in citation network of Evolutionary Algorithm : Computer science, Crossover(Genetic programming), RL
+
+Mathematical optimization       -2.98
+Mathematics                     -1.75
+Algorithm                       -1.04
+Metaheuristic                   -0.24
+Engineering                     -0.15
+Benchmark (surveying)            0.01
+Selection (genetic algorithm)    0.06
+Reinforcement                    0.06
+Task (project management)        0.16
+Genetic algorithm                0.39
+Artificial neural network        0.67
+Reinforcement learning           0.92
+Machine learning                 1.18
+Crossover                        1.31
+Artificial intelligence          1.38
+Computer science                 1.62
+
+Methodology:
+Depth-2 reference tracking was applied with field constraint ( CS, Decision, Econ and Fin, Math, Physics )
+Depth-0 papers were defined by condition "publication_year:2016-2026,title.search:review,cited_by_count:>100" with "symbolic regression" search query.
+Citation network with 2129201 works and 6523689 citations were sampled from OpenAlex DB
+Note: Bias was imposed by sampling method and not properly adjusted. (Publication year and outdegree)
+Note: "keyword - Symbolic regression" match is too small. "topic - Evolutionary Algorithm" is used instead.

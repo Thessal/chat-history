@@ -1,0 +1,8 @@
+# cat depth?_query_*.json | grep updated_date | cut -d\" -f4 | cut -c1-10 | sort | uniq -c | sort -nr  > ../updated_date.txt
+# for LINE in `cat depth0_query*.json | grep subfields `; do echo $LINE ; done | sort | uniq -c | sort -nr > subfields_level0.txt
+
+
+cp ../codes/collect_factors.py . && python collect_factors.py
+cp ../codes/build_graph.py . && python build_graph.py --input ./results --output output
+cp ../codes/calculate_networkfeatures.py . && python calculate_networkfeatures.py --graphml ./output/citation_network.graphml --nodelist ./output/nodelist.csv --output ./output/nodelist_networkfeatures.csv
+

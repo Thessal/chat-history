@@ -1,0 +1,16 @@
+info.06.txt implies that the fields are not point-in-time, and the time alignment resolution is approximately 1 year.
+
+-----
+
+context: the fields are not point-in-time, and the time alignment resolution is approximately 1 year.
+task: Remove fields invalidated by this problems.
+example: fwci does not represent the author's fame at the point of published date so it is not helpful for identifying pure novelty. citation count by year do not suffer the problem because the PIT data can be inferred, so do not remove it. 
+
+
+----
+
+write formalization_research/codes/build_graph.py that builds ciataion network. 
+read @beautifulMention  for instructions. 
+if it is not clear, please feel free to ask. 
+
+full json files will be provided later, and you can access a single json file in formalization_research/ example.json as an example. 
