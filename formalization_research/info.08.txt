@@ -1,0 +1,68 @@
+* Manual inspection of selected papers
+
+---
+
+title    : Swarm Intelligence
+type     : book
+year     : 2008 
+author   : c.blum d.merkle
+openalex : W1666784313
+
+Page 46-54   Ant colony optimization
+ * category : operations research, metaheuristic
+ * observation : transport cost optimization via pheromone trail of ant
+ * generalization : evo. comp., iterated local search, SA, tabu search
+ * abstraction : G=(V,E), common setup of shortest path finding algo can be used
+ * assumption : agent with no internal state
+ * hypothesis : dynamic weighted edge (pheromont tail), cost causes weight change
+ * definition : candidate solution is parametrized probability distribution over the solution space
+ * observation : if good solution consist of good components, biased sampling towards the solution is possible.
+ * category : Some variants of ACO use different methods to bias the sampling
+
+Page 61-66   PSO, Inertia, Pareto ACO 
+ * definition : Inertia of particle, Velocity of particle
+ * definition : three parts - momentum, cognitive(return to pbest), social(attraction towards gbest/lbest)
+ * observation : solution diversity along the Pareto front in trade-off situation is important
+ * hypothesis : PSO can drive the population towards the whold Pareto front
+ * definition : update equation with lbest (ring lattice) method drives the paritcle towards the local best, while gbest (fully connected) drives to the global best.
+ * observation : diversity depends on the communication topology of the particle. 
+
+Page 194-197 Diversity loss
+ * observation : environment change after the swarm convergence, leads to diversity loss
+
+Q&A on this book
+Q1 : Identify causal relation that distingushes Kuramoto model from ACO in the context of synchronized behavior of ant colony / convergence of PSO.
+A1 : Interaction in ACO is mediated by time-evolving scalar field ϕ(x,t). However ACO do not require phycial symmetry and conservation laws, resulting different application field. Approximately speaking, PSO is non-physical version of mean-field approximation, resulting distinguished utility of the method over models.
+Q2 : Define difference between multiobjective optimization and optimization of linear combinations of objectives. In this context, what difference makes PSO distinguished from the linear optimization?
+A2 : PSO can determin pareto front, not a single optimal point.
+Q3 : Is it factually true that PSO can generate a probability distribution of the optimal solution candidates? Does it imply that MOPSO can be applied to multiple objectives (for example sharpe and drawdown) of Markowitzian portfolio, and assign weights to the stocks instead of finding the best stock? Identify the root cause of this difference, if the inference is true.
+A3 : It creats empirical ensemble. The definition of the solution space causes the difference.
+Q4 : While the initial lbest model with ring topology is a good abstraction, I'd like to generalize it to strogatz's ring lattice with rewiring, and barabasi's scale-free. A distinguishing characteristic between these network is correlation length. I guess correlation length is an important parameter for finding optimal and diverse solution.  
+A4 : MOPSO requires suppressing the correlation length for the diversity
+Q5 : The topology(mainly, local dimension/degree of the solution phase space, and maybe symmetry. e.g. the function set may include mod function or not) is determined by the formalism of the symbolic regression, or mutation method of GA. How does it affect the diversity of the particle swarm? This is a ill-defined question, so feel free to guess.
+A5 : ...
+Q6 : Please apply tactic `abstraction` and `identification of order parameter`
+A6 : Control parameter is the effective coupling strength
+Q7 : Lost Diversity concept sounds similar with catastrophic forgetting. Please provide comparison. 
+A7 : Over-coupling vs Convergence dynamics
+
+---
+
+title    : Ultrahigh Dimensional Feature Selection: Beyond The Linear Model
+type     : article
+year     : 2009
+author   : j.fan r.samworth y.wu
+openalex : W3002534707
+
+
+
+
+TODO:
+ 	https://openalex.org/W82518839
+ 	https://openalex.org/W4297922645
+ 	https://openalex.org/W1551103807
+ 	https://openalex.org/W4300610723
+ 	https://openalex.org/W4293860453
+ 	https://openalex.org/W4301762632
+ 	https://openalex.org/W1504391786
+ 	https://openalex.org/W2251503907
