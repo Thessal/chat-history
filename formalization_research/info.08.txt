@@ -54,11 +54,38 @@ year     : 2009
 author   : j.fan r.samworth y.wu
 openalex : W3002534707
 
+* category : SIS(sure independ screening) is a method for sparse estimation of cov. mat.
+* observation : Conventional sparse estimation method such as LASSO or Dantzig selector tends to overfit.
+* observation : Magnitudes of factors chosen by LASSO is biased towards the regularization parameter \lambda by the definition. \lambda tends to be smaller because MSE = Bias^2 + Variance ~ \lamda^2 + Variance. Which in turn, high variance and overfit (selection of noise factor)
+* definition : sure screening property implies the possibilty to exponential model size growth over sample count.
+* definition : marginal utility is defined on a specific feature and the feature set, to measure the marginal loss reduction by the feature. this concept is similar to pareto optimimality argument. 
+* hypothesis : two-stage approach with first step of filtering of factors based on marginal utility, and second step of factor selection and combination by pseudo-likelihood with penalty term, leads to sure screening property.
+
+
+---
+
+title    : Towards a New Evolutionary Computation: Advances on Estimation of Distribution Algorithms
+type     : book
+year     : 2006
+author   : l.jose
+openalex : W82518839
+
+Estimation of Distribution Programming: EDA-based Approach to Program Generation
+* observation : GP methods like crossover and mutation constrains the search space
+* definition : Estimation of distribution algorithms (EDA) method infer distribution from points in a generation, and sample from the distribution to iteratively derive the next generation.
+* definition : Bayesian Network estimates conditional prob. dist. of child node selection given its parents.
+* definition : Laplace smoothing (Additive smoothing) is an update method based on choice of dirichlet prior is which is conjugate prior of multinomial distribution.
+* observation : Bayesian network view enables efficient iterative sampling of expression, utilizing laplace smoothing.
+
+Feature Ranking Using an EDA-based Wrapper Approach
+* hypothesis : by constructing baysian network from selected feature set and calculating feature ranking, optimality and diversity of the feature selection can be improved.
+
+
+---
 
 
 
 TODO:
- 	https://openalex.org/W82518839
  	https://openalex.org/W4297922645
  	https://openalex.org/W1551103807
  	https://openalex.org/W4300610723
