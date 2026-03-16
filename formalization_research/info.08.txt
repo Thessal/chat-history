@@ -83,13 +83,96 @@ Feature Ranking Using an EDA-based Wrapper Approach
 
 ---
 
+title    : Representations for Genetic and Evolutionary Algorithms
+type     : book
+year     : 2006 
+author   : f.rothlauf
+openalex : W4297922645
+
+Page 9-25
+
+Genotypes and Phenotypes
+* category: Construction of evolutionary system, as a mapping from a genotype space \Phi_g to an phenotype space \Phi_p
+* definition : Genotype space is topology of configurations that optimzer explores.
+* definition : Phenotype space is a observables which can be used to define the optimality.
+* definition : Direct representation is the case of \Phi_g = \Phi_p.
+* observation : Direct representation usually requires proper search operators.
+
+Genetic and Evolutionary Algorithms
+* definition : Schema theorem shows that short and fit solution receive exponentially increasing trials, when standard GA method was used.
+* assumption : Building block hypothesis assumes that highly fit solution is composed of simple fit solutions.
+* observation : Schema theorem may imply building block hypothesis.
+
+Problem Difficulty
+* definition : correlation analysis measures smoothness of map \Phi_g \rightarrow fitness by investigating corr(dist(x_g*, x_g), fitness)
+* definition : Walsh coefficients measures linearity of map \Phi_g \rightarrow fitness by investigating linear combination of x_g
+* definition : Schemata analysis measures violation of building block hypothesis
+
+Q1 : I observe methodological similarity between the "social term" in PSO and crossover in GA. From the observation I infer that optimal topology of agent (in PSO) depends on the difficulty of the problem, which can be measured by correlation analysis (in GA)
+A1 : ...
+Q2 : You connected Lipschitz condition with smoothness.
+A2 : It can be useful for convergence analysis.
 
 
-TODO:
- 	https://openalex.org/W4297922645
- 	https://openalex.org/W1551103807
- 	https://openalex.org/W4300610723
- 	https://openalex.org/W4293860453
- 	https://openalex.org/W4301762632
- 	https://openalex.org/W1504391786
- 	https://openalex.org/W2251503907
+---
+
+title    : Genetic Algorithms and Genetic Programming in Computational Finance
+type     : book
+year     : 2002
+author   : ...
+openalex : W1551103807
+
+Option Pricing
+* definition : A genetically optimized NN is a method that optimizes sets of NN weight by modeling NN edge weight as genotype like GA, and optimizes it using crossover and mutation. (Alan Jay White, 1998)
+
+Q1 : A genetically optimized NN is more likely they could preserve diversity. However, it seems that modern optimizers of ML research are more similar to simulated annealing rather than particle swarm.
+A1 : Computational intractablility of genetic optimization on large model caused this outcome.
+Q2 : Maybe we could use genetic optimization on fine-tune. I guess they already did it. Please look for relevant academic article.
+A2 : See review article "When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges" 10.34133/research.0646
+
+
+---
+
+title    : 2014 IEEE Congress on Evolutionary Computation (CEC)
+type     : proceedings
+year     : 2014
+author   : ...
+openalex : W4300610723
+
+...
+
+---
+
+title    : IEEE Congress on Evolutionary Computation
+type     : call for paper
+year     : 2006
+author   : ... 
+openalex : W4293860453
+
+---
+
+title    : Proceedings of the Genetic and Evolutionary Computation Conference
+type     : proceedings
+year     : 2017
+author   : ...
+openalex : W4301762632
+
+...
+
+---
+
+title    : Advances in Differential Evolution 
+type     : book 
+year     : 2008
+author   : uk.chakraborty
+openalex : W1504391786
+
+TODO
+
+---
+
+title    : Proceedings of the 2015 Annual Conference on Genetic and Evolutionary Computation
+type     : proceedings 
+year     : 2015
+author   : ...
+openalex : W2251503907
