@@ -1,0 +1,29 @@
+* Prompt Template : 
+Template for google scholar lab : What is recent developments ... (ML/AI/Math methodology) for ... , that may affect evolutionary programming, in the context of symbolic regression? (CS/Finance subject)?
+Template for gemini : What is ... and how it is different from Symbolic Regression? 
+
+
+* Manual inspection :
+It seems that manual inspection is required.
+The result contains too much trivial papers. Recent research on SR seems to be consolidating indeed.
+It seems that most papers with citation less than 2/yr with age greater than 3y are trivial.
+It seems that some papers with citation less than 50/yr contains interesting views worth reading.
+Too much citation is an indicator of review paper.
+
+
+* Examples of relatively trivial works :
+- Application of transformer on linearized syntax tree without attention mechanism modification (pure engineering)
+- Application of data structure for that can represent assignment statement (no disruption aginst conventional GP method)
+
+
+* Manual Summarizations :
+Some Recent Developments 
+- EQL (equation learner) : Specialized neural network architecture designed to perform symbolic regression, that uses common mathematical functions by as activation functions. I guess it should be compatible with KAN?
+- MCTS (Monte Carlo Tree Search) : Similar to Baysian network, I guess it may be generalized to Q-learning or RL framework? But I wonder why it is "planning" state s is just sequence of actions, without the tree information.
+- DSR (Deep symbolic regression) : Training of sequence generation model using policy gradient (rather than black-box / AutoML )
+
+
+* Questions
+- It seems that the community lacks graph generation model
+  * maybe we could read GCPN (Graph convolutional policy network, 2018)
+- Why ablation study? Was it cased by pub. year, or relevance to the topic?
