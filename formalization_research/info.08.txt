@@ -167,7 +167,13 @@ year     : 2008
 author   : uk.chakraborty
 openalex : W1504391786
 
-TODO
+Page 173 Multi-objective Optimizatino Using Differential Evolution
+
+
+Page 197-238  Differential Evolution algorithm
+Category : Generation update proceture of DE updates position of particle, (while velocity is updated in PSO)
+Category : Parallel Evolutionary Algorithm (PEA) allows migration of particle in the communication network.
+Definition : Migration is an operation that moves local best particle to next subpopulation of the ring, which is implemented as message passing among processors.
 
 ---
 
