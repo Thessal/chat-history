@@ -1,0 +1,6 @@
+reading_papers/summary.01.*.md was manually inspected and updated.
+Additional related papers were added to reading_papers/papers/*.pdf 
+
+1. Read updated summary, and papers.
+2. Write reading_papers/summary.02.*.md for each paper. Use format and style, logic of reading_papers/summary.01.*.md
+3. Write reading_papers/answers.01.md that answers questions in reading_papers/questions.01.txt.

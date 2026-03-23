@@ -1,0 +1,7 @@
+read papers/*.pdf. 
+extract claims, novelty, methodology, results of each paper into summary.01.*.md
+
+* Use concise prose, single sentence for each item, and use less than 15 words.
+* Include methodological details. 
+* For each catetory, try to include at least 30 items.
+* To make the list complete, append other important statements at the end of the document.

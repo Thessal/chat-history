@@ -1,0 +1,19 @@
+Questions
+
+* BK Petersen 2019
+1. While proposed DSO method provide parent and sibling information as sequence to the model, does it preserve adjacency of the expression tree? For example, does the model aware that current depth in the expression tree? What kind of positional encoding is used in the proposed model?
+2. Did the paper show the poor performance of the expectation-based method? I assume that is conceptually similar to beam search. Wasn't beam search used for AlphaGeometry? Is the proposed method fundamentally different from the beam search, or is it a modification?
+3. I guess that high difference between the expected and the best performance of the solution set implies high problem difficulty, because it means small change in genotype space can lead to large change in fitness (correlation analysis in GA perspective). Is there a comparison between easy and difficult problem case? Is there a mention about soultion diversity? Can I see the exptectation based reward works as a global mean-field, and risk-seeking reward works as a local search?
+4. Do this method can be modified to fit the constraints without additional fitting step?
+5. BFGS may fail to converge, and the solver parameter have to be tuned. How it is handled?
+6. Explain entropy gradient in Algorithm 1.
+7. While the sequence is mathematically identical to the expression tree, does the model learn the tree structure? Or does it just learn the sequence? It is not likely that the model learns the tree structure, because the model is not capable of solving logical puzzle.
+8. There are variants of RL framework. On-line, off-line, etc. Categorize the proposed method.
+9. Explain "Risk-seeking policy gradient" with details, preferably using equations.
+10. Briefly explain EPOpt-ε algorithm.
+
+* PA Kamienny 2022
+1. Symbolic and subsymbolic approaches are usually complementary. It seems the author mixes two methods. What is the logical reason that the author had to choose this approach? What is the advantage?
+2. It is a usual practice to use constants such as 5, 21, 252 in the research stage, and optimize it later. (usually little bit smaller) However, afaik, that's only for small-scale strategy pool or high-frequency strategy. Why didn't the author simply add nonlinearity at the end of the function, and frame it as constant determination problem?
+3. IMHO, embedder and whitened input may limit the application of the model to time-series modelling. Is whitening a big deal?
+4. Please give me more explanation about attention head analysis presented in figure 3.
