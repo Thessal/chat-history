@@ -1,0 +1,17 @@
+My experience in financial research tells that it is important to identify causal factor that distinguishes researcher from developer.
+* category : I used to generate prediction model, using symbolic regression.
+* definition : Conservation law of a data is `pos + neg + neut = 1`, but it is not always true because of various reason. It can be market regime, or data processing error. For example, the symmetry of the data changed to `pos - neg + neut = 1`.
+* observation : Symbolic regression generated equations which overfit the inconsistency of the data. Backtest shows good performance, with A PnL curve that bends in the middle. However, it lacks robustness in the sense that it fails to generalize to the unseen data.
+* hypothesis : Depending solely on symbolic regression have no prediction power when the governing rule is dynamic. This is what developer do.
+* observation : A researcher (Ph.D in physics) next seat to me, identified the inconcistency by observing the symmetry. However it is not clear how he could do that.
+* hypothesis : Equation with symmetry is more significant if the complexity and empirical error is the same. (Tegmark, AI Feynman)
+* hypothesis : Symbolic regression with transformer without additional symmetry consideration, lacks prediction power. (Kamienny 2022, Figure 17 and Figure 18)
+* category : I am blind to symmetry, just like Helen Keller couldn't learn geometry. 
+* hypothesis : Formalization of research may be a way to overcome my limitation.
+
+Financial strategies
+* definition : Arbitragies have low risk, because their logic is based on symmetry.
+* observation : It is not easy to discover symmetries like Put-Call parity, Butterfly arbitragies, from option chains.
+* hypothesis : Theoretical approach can help to find symmetry. (model-based, option pricing based on mathematical model)
+* observation : Empirical apporach is required for the edge. (data-driven research, symbolic regression). For example, we don't derive effective number of days in a year, or interest rate from the theory.
+* hypothesis : Symbolic regression with symmetry consideration can improve interpretability and identify the significance of robust strategies.

@@ -1,0 +1,6 @@
+Read reading_papers/info.03.txt. It is my experience. 
+Read "reading_papers/papers/M Tegmark 2020.pdf" and "reading_papers/papers/RD Ray 2026.pdf".
+
+1. Under assumption that info.03.txt was derived from the my intention, extract information that is relevant to me from M Tegmark 2020.pdf and RD Ray 2026.pdf. Write the list into reading_papers/summary.03.txt
+
+2. The tone of info.03.txt is too casual. Reconstruct the document to reading_papers/questions.03.txt, into a set of well-defined research questions with formal prose.

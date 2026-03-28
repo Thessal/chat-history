@@ -1,0 +1,11 @@
+Standard symbolic regression algorithms struggle with complex, generic functions unless they exploit simplifying underlying properties such as symmetry, separability, or units.
+
+Neural networks can be deployed as high-dimensional interpolators to systematically test for and discover translational, rotational, or scaling symmetries within raw data.
+
+Identifying these symmetries allows the primary dataset to be mathematically transformed and broken down into simpler components with fewer independent variables, mitigating overfitting and combinatorial explosion during symbolic regression.
+
+Purely empirical financial machine learning models frequently learn spurious correlations that violate fundamental economic principles, such as the absence of arbitrage, causing them to fail during dynamic regime shifts.
+
+Theoretical market symmetries and rules can be enforced during empirical model training by embedding partial differential equations (e.g., the Feynman-Kac PDE for no-arbitrage conditions) directly into the loss function.
+
+Constrained, physics-informed latent dynamics can be subsequently distilled through a differentiable symbolic bottleneck to output sparse, human-readable mathematical expressions and trading rules.

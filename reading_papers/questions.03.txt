@@ -1,0 +1,5 @@
+RQ1: How does the deviation of empirical market data from theoretical conservation laws impact the out-of-sample robustness and generalization of purely data-driven symbolic regression models?
+
+RQ2: By what computational mechanisms can structural and mathematical symmetries be formally identified and embedded into symbolic regression architectures to prevent algorithmic overfitting to transient data inconsistencies?
+
+RQ3: To what extent does the hybridization of theoretical constraints (e.g., no-arbitrage models) with empirical symbolic regression methodologies improve the systematic discovery and interpretability of robust alpha generation strategies?
