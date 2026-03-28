@@ -3,3 +3,24 @@ RQ1: How does the deviation of empirical market data from theoretical conservati
 RQ2: By what computational mechanisms can structural and mathematical symmetries be formally identified and embedded into symbolic regression architectures to prevent algorithmic overfitting to transient data inconsistencies?
 
 RQ3: To what extent does the hybridization of theoretical constraints (e.g., no-arbitrage models) with empirical symbolic regression methodologies improve the systematic discovery and interpretability of robust alpha generation strategies?
+
+---
+
+Manual review
+
+RQ1 is just repeating the observation, RQ2 lacks novelty, and RQ3 is RD Ray 2026.pdf. 
+I think something's wrong with my process of generating research questions. 
+
+What is the causal factor that causes LLM model to ignore the prior knowledge and logical thinking, and just repeat the information in the papers?
+
+---
+
+Gemini said
+
+Explicit operational verbs used in your prompt ("extract information" and "reconstruct the document.")
+
+Full academic documents establishes a strict semantic boundary.
+
+requires specific logical operators. The prompt did not instruct the model to identify theoretical contradictions, cross-examine the methodologies, or apply an external analytical framework.
+
+To generate novel research questions, the prompt must explicitly mandate analytical operations rather than information extraction.
